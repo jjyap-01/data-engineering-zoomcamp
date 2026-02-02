@@ -48,6 +48,7 @@ services:
     # To run Kestra in a rootless mode in production, see: https://kestra.io/docs/installation/podman-compose
     user: "root"
     command: server standalone
+    env_file: .env_encoded
     environment:
       KESTRA_CONFIGURATION: |
         datasources:
